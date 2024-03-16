@@ -1,0 +1,99 @@
+.swiper{
+
+padding: 80px 0;
+}
+
+
+.swiper-slide-next, 
+.swiper-slide-active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+  .button-next,
+  .button-prev {
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    padding: 10px;
+    border-radius: 50px;
+    /* background-color: rgba(56, 245, 255, 0.2); */
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 10;
+    border:2px solid white;
+  }
+  :is(.button-next, .button-prev):hover {
+    background-color: rgba(56, 245, 255, 0.3);
+  }
+  
+  .button-next {
+    right: 10px;
+  }
+  .button-prev {
+    left: 10px;
+  }
+  /* .slide-inner{
+    width: 80%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 20px 0;
+    border:1px solid #42CF46;
+    background-color:rgba(245, 245, 245, 0.13); ;
+    box-shadow:(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 15px;
+    
+
+  }  */
+
+
+  .slide-inner {
+    position: relative;
+    width: 80%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 20px 0;
+    background-color: rgba(245, 245, 245, 0.13);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    overflow: hidden; /* To hide any content that may extend beyond the border */
+}
+
+.slide-inner::before,
+.slide-inner::after {
+    content: "";
+    position: absolute;
+    background-color: #42CF46;
+}
+
+.slide-inner::before {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    border-radius: 15px 15px 0 0; /* Border radius for the top */
+}
+
+.slide-inner::after {
+    bottom: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    border-radius: 15px 0 0 15px; /* Border radius for the left */
+}
+
+  
+.custom-border {
+  fill: rgba(245, 245, 245, 0.13);
+  stroke-width: 3px;
+  stroke: #42CF46;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.swiper {
+  --swiper-pagination-color: rgba(51, 161, 55, 1);
+  --swiper-pagination-bullet-inactive-color: rgba(131, 131, 133, 1);
+  
+}
