@@ -9,11 +9,6 @@ function App() {
       <Nav />
 
       <Outlet />
-
-      {/* <div
-        className="bg-[#080F2ED9] bg-opacity-[85%] w-full h-screen bg-cover bg-center "
-        style={{ backgroundImage: `url(${backgroundImage})` }}
-      ></div> */}
     </div>
   );
 }
